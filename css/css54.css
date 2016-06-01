@@ -31,8 +31,7 @@
     border: 1px solid #F00;
     display: inline-block;
     margin: auto;
-    max-height: 200px;
-    min-height: 200px;
+    height: 200px;
     min-width: 300px;
     overflow: scroll;
     padding: 20px;

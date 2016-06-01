@@ -17,8 +17,6 @@ var zonaDatos;
 var botonArchivos;
 
 
-
-
 //1.1 Extracción de elementos desde HTML
 zonaDatos = document.getElementById("zona-datos");
 botonArchivos = document.getElementById("archivos");
@@ -35,11 +33,18 @@ function mostrarEnWeb(e) {
     resultado = e.target.result;
 
     zonaDatos.innerHTML = resultado;
+// Si en lugar de usar innerHTML usamos textContent, no ejecuta código HTML
+//    zonaDatos.textContent = resultado;
 }
+
 
 
 function procesarArchivos(e) {
     'use strict';
+//  Pasamos a la función procesarArchivos el parámetro e
+//  que es el evento que desencadena input a través de su
+//  botón botonArchivos que es la captura del botón archivos
+//  del fichero HTML
 
     var archivos;
     var miArchivo;
@@ -71,6 +76,8 @@ function procesarArchivos(e) {
 function comenzar() {
     'use strict';
 
+// El botón "archivos" es un input tipo file que genera un
+// evento. Este evento es la selección de un fichero
     botonArchivos.addEventListener("change", procesarArchivos, false);
 }
 

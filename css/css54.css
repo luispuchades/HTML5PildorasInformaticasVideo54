@@ -31,8 +31,10 @@
     border: 1px solid #F00;
     display: inline-block;
     margin: auto;
-    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
     min-width: 300px;
+    overflow: scroll;
     padding: 20px;
     vertical-align: top;
     width: 40%;
